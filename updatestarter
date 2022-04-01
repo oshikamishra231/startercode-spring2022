@@ -4,3 +4,4 @@
 # manually
 
 git pull staff2 main --allow-unrelated-histories
+source ./updatestarter
