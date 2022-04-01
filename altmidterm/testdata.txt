@@ -1,0 +1,28 @@
+rom mockmr import MockMR
+import random
+
+class MyMR(MockMR):
+    #def mapper_init(self):
+    #    pass
+    
+    def mapper(self, key, value):
+        yield key, value
+        
+    #def mapper_final(self):
+    #    pass
+    
+    #def reducer_init(self):
+    #    pass
+    
+    def reducer(self, key, values_iterator):
+        yield key, sum(values_iterator)
+        
+    #def reducer_final(self):
+    #    pass
+    
+    #def partition(self, key, num_reducers):
+    
+    #def compare(self, a, b):
+    
+if __name__ == "__main__":
+    MyMR.run(trace=True) 
